@@ -1,0 +1,12 @@
+# 하나의 작업은 같은 주소
+    - /login
+        get : 읽기 (render_template)
+        post : 처리한 다음 redirect
+            성공 - /success 로 보내자
+            실패 - /login으로 보내자
+                - 그냥 /login 으로 보내면 로그인 주소를 타이핑해서 들어온 것과
+                  로그인에 실패한 것이 구별이 안된다
+                - /login?state=fail 로 이동시키자
+                   request.args.get('state')
+    - /success
+        get : 읽기 (render_template)

@@ -1,5 +1,3 @@
-# 선생님 풀이
-
 from flask import Flask, render_template, redirect, request
 
 app = Flask(__name__)
@@ -12,14 +10,13 @@ def add_get():
 def add_post():
     value1= int(request.form.get('value1'))
     value2= int(request.form.get('value2'))
-    hap= value1+value2
-    # 새로운 작업으로 보낸다
-    return redirect(f"/result?hap={hap}")
+    sum_result = value1+value2
+    return redirect(f"/result?sum_result={sum_result}")
 
 @app.route("/result")
 def result():
-    hap=request.args.get("hap")
-    return render_template("result.html", hap=hap)
+    sum_result = request.args.get("sum_result")
+    return render_template("result.html", sum_result=sum_result)
 
 
 app.run(debug=True)
