@@ -3,28 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>div와 span</title>
+    <title>Document</title>
     <style>
-        .baseball {
-            color: red;
+        a {
+            text-decoration: none;
         }
-        .em {
-            font-size: 150%;
+        /* 가상 클래스 선택자 : 상황에 따른 선택자 */
+        a:hover {
+            text-decoration: underline;
+        }
+        /* 방문한 링크 색상 변경하기 */
+        a:visited {
+            color:red;
         }
     </style>
-
 </head>
 <body>
-    <div class="baseball">
-    <p>야구 <span class="em">소식</span>입니다</p>
-    <p>야구 소식입니다</p>
-    </div>
-    <div class="football">
-    <p>축구 소식입니다</p>
-    <p>축구 <span class="em">소식</span>입니다</p>
-    </div>
-    <div class="basketball">
-    <p>농구 소식입니다</p>
-    </div>
+    <a href="http://www.google.com">구글</a>
+    <a href="http://www.yahoo.co.jp">야후</a>
 </body>
 </html>

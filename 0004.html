@@ -1,30 +1,45 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hn, p, div</title>
+    <title>링크 변경</title>
     <style>
-        /* 태그 선택자 */
-        p {
-            color:blue;
+        /*
+         html 요소의 배치 : 위에서 아래로 (block), 좌에서 우로 (inline)
+        */
+
+        /* div 요소들에 width는 100px, height에 100px, border는 1px solid red 로 지정 */
+        /* line height는 한 줄일 때만 가운데 정렬이 가능함 */
+        /* 태그 선택자 (1), 클래스 선택자(10), 아이디 선택자(100) */
+
+        .box {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            /* 상하좌우 */
+            margin: 10px;
+        }
+        .red {
+            border: 1px solid red;
+        }
+        .blue {
+            border: 1px solid blue;
+        }
+        .green {
+            border: 1px solid green;
+        }
+        div.box {
+            /*      상하 좌우*/
+            margin: 10px 0;
         }
     </style>
 </head>
 <body>
-    <h1>제목입니다</h1>
-    <p>내용 내용 내용</p>
-    <p>내용 내용 내용</p>
-    <p>내용 내용 내용</p>
-    <div>
-        <!-- 다음으로 가는 링크 -->
-         <a href="http://www.daum.net">다음으로</a>
-    </div>
-    <div>
-        <!-- 가급적 alt 그리고 width 또는 height를 준다 -->
-       <img src="./image/dream.jpg" alt="드삼쇼" width="100">
-       <img src="./image/dream.jpg" alt="드삼쇼" width="150">
-       <img src="./image/dream.jpg" alt="드삼쇼">
-    </div>
+    <!-- div는 블록요소이기 때문에 줄띄움이 있음-->
+    <div class="box red">빨강</div>
+    <div class="box blue">파랑</div>
+    <div class="box green">초록</div>
 </body>
 </html>

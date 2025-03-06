@@ -5,28 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    /* 태그 선택자 */
-        p {
-            text-decoration: underline; 
+        * {
+            margin: 0;
         }
-        /* id 선택자로 두 번째 p 요소에 글자를 두껍게 */
-        #second {
-            font-weight: bold;
+        .menu {
+            width : 100px; /* 너비 */
+            height : 40px; /* 높이 */
+            border: 2px solid red; /* 외곽선 */ 
+            background-color: blueviolet; 
+            color: aliceblue; /* 글자색 */
+            text-align: center;
+            line-height: 40px; /* height와 똑같이 만들면 글자가 완전 가운데로 옴 */
+            font-weight: bold; /* 폰트 굵기 */
+            border-radius: 5px; /* width 와 똑같이 만들면 완전 원형 */
+            display: inline-block; /* 위에서 아래로 있던 요소들을 전부 왼쪽에서 오른쪽으로 변경 */
+            transition: all 0.3s; /* div 요소가 바뀌는 속도 */
+
         }
-        /* id 선택자로 세 번째 p 요소에 글자를 이탈리체로 */
-        #third {
-            font-style:italic;
-        }
-    
-        /* class 선택자 : 여러개를 지정 */
-        .red {
-            color: red;
+
+        /* 마우스가 올라오면 */
+        .menu:hover {
+            text-decoration: underline; /* 글자로 향할 때 밑줄을 긋거나 다른 변화를 주는 */
+            background-color: white;
+            color : black;
+            cursor: pointer; /* 커서 모양 변경 */
         }
     </style>
 </head>
 <body>
-    <p class="red">우리나라</p>
-    <p id="second">좋은나라</p>
-    <p id="third" class="red">대한민국</p>
+    <div class="menu">인사말</div>
+    <div class="menu">상품 소개</div>
+    <div class="menu">회사 소개</div>
 </body>
 </html>

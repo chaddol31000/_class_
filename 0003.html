@@ -1,19 +1,31 @@
-<!-- 자동완성(emmet) -->
 <!DOCTYPE html>
-<!-- 웹접근성 : 리더기 언어 설정 -->
-<html lang="ko">
+<html lang="en">
 <head>
-    <!-- 언어 설정 : 문자집합은 utf-8로 -->
-    <meta charset="UFT-8">
-    <!-- 
-    뷰포트 설정 : 저해상도 폰을 위한 확대 축소 설정
-    지금은 mobile first -> 의미 없다 
-    -->
-    <mata name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>웹접근성 Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML link</title>
 </head>
 <body>
-    <!-- emmet -->
-     <img src="" alt="산에서 잠자는 곰 이미지">
+    <a href="http://www.naver.com/">네이버로</a>
+    <!-- 링크할 url 을 모를 때 -->
+    <a href="#">다음으로</a>
+    <!-- 
+    절대주소와 상대주소
+     - 절대주소 : 파일의 고유한 utl insa.html (웹브라우저에 찍히는 주소는 절대주소)
+     - 상대주소 : 현재 파일 기준의 주소 ex) 내 오른쪽 30cm
+
+    -->
+
+    <!-- 0001.html에 절대, 상대로 링크 -->
+     <a href="http://127.0.0.1:5500/day3/0001.html">절대</a>
+     <a href="0001.html">상대</a>
+     <a href="/day3/0001.html">서버주소 생략한 절대주소</a>
+
+    <!-- /로 시작하면 절대주소 -->
+
+    <!-- day2의 0009.html을 절대와 상대로 링크하시오 -->
+     <a href="/day2/0009.html">절대</a>
+     <a href="../day2/0009.html">상대</a>
+    
 </body>
 </html>

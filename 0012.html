@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블</title>
+</head>
+<body>
+    <!--
+        markup : html 작성
+        sementic markup : 태그를 의미에 맞게 정확하게
+            - ul은 대등한 아이템들을 나열하는 것
+            - ol은 순서가 있는 아이템들을 나열하는 것
+        html5에서는 의미있는 구조를 나타내는 태그들을 추가 (시맨틱 태그)
+            - thead : 있어도 되고 없어도 되는 태그라 안 만들면 자동으로 추가해서 나타냄
+            - tbody : 무조건 있는 태그 내용을 담고 있음
+            - tfoot : 가장 마지막에 들어가며 합계나 평균을 구할 때 사용함 
+            * 위 3개는 div 대신 쓰는 경우임
+    -->
+    <table>
+        <thead>
+            <tr>
+                <th>학교</th>
+                <th>교사</th>
+                <th>학생</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>신정초</td>
+            <td>60</td>
+            <td>1260</td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>평균</td>
+                <td>35.8</td>
+                <td>650</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
