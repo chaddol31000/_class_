@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    /* 태그 선택자 */
+        p {
+            text-decoration: underline; 
+        }
+        /* id 선택자로 두 번째 p 요소에 글자를 두껍게 */
+        #second {
+            font-weight: bold;
+        }
+        /* id 선택자로 세 번째 p 요소에 글자를 이탈리체로 */
+        #third {
+            font-style:italic;
+        }
+    
+        /* class 선택자 : 여러개를 지정 */
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p class="red">우리나라</p>
+    <p id="second">좋은나라</p>
+    <p id="third" class="red">대한민국</p>
+</body>
+</html>

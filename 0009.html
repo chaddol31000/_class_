@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인 요소와 블럭 요소</title>
+    <style>
+        #first {
+            background-color: skyblue;
+        }
+        #second {
+            background-color: plum;
+        }
+        #thrid {
+            background-color: blueviolet; 
+        }
+        #fourth {
+            background-color: darkturquoise; 
+        }
+    </style>
+</head>
+<body>
+<!-- block 요소는 한줄에 하나 배치, inline 요소는 내용의 너비 만큼 차지 -->
+    <div>
+        <div id="first">A</div>
+        <div id="second">B</div>
+        <div>
+            <span id="thrid">C</span>
+            <span id="fourth">D</span>
+        </div>
+    </div>
+</body>
+</html>
