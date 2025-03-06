@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 모델</title>
+    <style>
+        * {
+            margin : 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div {
+            width: 150px;
+            height: 150px;
+            /* width는 내용 + 패딩 + 보더 */
+
+        }
+        .first {
+            border: 1px solid pink;
+
+        }
+        .second {
+            padding: 20px;
+            border: 5px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        요소는 내용 + padding + border + margin
+        박스의 너비는 content의 너비
+        .first는 내용 150px + padding 0 + border 2px => 152px
+        .second는 내용 150px + padding 40 + border 2px -> 192px
+    -->
+    <div class="first"></div>
+    <div class="second"></div>
+</body>
+</html>

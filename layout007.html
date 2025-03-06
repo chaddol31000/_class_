@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        
+        /* #target에 너비, 높이 100픽셀 주고 가운데에 배치. 글자 a도 정가운데*/
+        #target {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            border: 1px solid red;
+            text-align: center;
+            line-height: 100px;
+        }
+        #a {
+            position:absolute;
+            bottom: 20px;
+            right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        위에서 아래, 좌에서 우 배치 규칙을 변경
+        1. inline-block: 위에서 아래 - > 좌에서 우로 변경 거의 사용 안 함
+        2. float: 좌, 우로 배치
+        3. position : 내가 원하는 위치에 배치
+        4. flex 
+    -->
+    <div id="target">A</div>
+    <div id="a">B</div>
+</body>
+</html>

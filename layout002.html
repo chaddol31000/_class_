@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 속성</title>
+    <style>
+        /* 
+            전체의 글자색을 빨강으로 해라 : css rule
+            css rule은 선택자, 속성, 값으로 구성된다
+        */
+
+        *{
+            color:red;
+        }
+        /* 태그 선택자 : 우선순위 1, class 선택자 : 우선순위 10, id 선택자 : 우선순위 100*/
+        div {
+            font-size:0.8em;
+        }
+        /* 하위 선택자 (target 밑에 있는 모든 div)*/
+        #target div {
+            color:red;
+        }
+        /* 자식 선택자 */
+        #target>div {
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="target">
+        <div>
+            우리나라
+            <div>
+                좋은나라
+            </div>
+        </div>
+    </div>
+</body>
+</html>

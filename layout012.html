@@ -1,0 +1,94 @@
+<!-- 레이아웃 만들어보기 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        #app {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        header, nav, footer {
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+        }
+        header {
+            background-color: white;
+        }
+        nav {
+            background-color: aliceblue;
+        }
+        ul {
+            list-style: none;
+            overflow: hidden;
+        }
+        ul li {
+            float: left;
+            width: 120px;
+            text-align: center;
+            height: 60px;
+            line-height: 60px;
+        }
+        ul li:hover {
+            background-color: cornflowerblue;
+            cursor: pointer;
+        }
+        main {
+            overflow: hidden;
+        }
+        aside {
+            line-height: 1000px;
+            text-align: center;
+        }
+        aside:first-of-type {
+            float: left;
+            width: 120px;
+            height: 1000px;
+            background-color: gainsboro;
+        }
+        aside:last-of-type {
+            float: right;
+            width: 120px;
+            height: 1000px;
+            background-color: lightcyan;
+        }
+        section {
+            float: left;
+            width: 700px;
+            min-height: 1000px;
+            text-align: center;
+            line-height: 1000px;
+        }
+        footer {
+            background-color: rgb(rgb(240, 238, 238));
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header>헤더 영역</header>
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>소개</li>
+                <li>사업분야</li>
+            </ul>
+        </nav>
+        <main>
+            <aside>부가정보</aside>
+            <section>본문</section>
+            <aside>부가정보</aside>
+        </main>
+        <footer>푸터 영역</footer>
+    </div>
+</body>
+</html>

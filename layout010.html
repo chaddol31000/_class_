@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float을 사용한 메뉴</title>
+    <style>
+        /* 왼쪽 빈 공간 없애고 동그라미 제거 */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        ul {
+            /* float된 요소들이 부모에서 clear하는 방법 : overflow: hidden; */
+            list-style: none;
+            overflow: hidden;
+        }
+        ul li {
+            /* 공중으로 떠서 이동. 부모의 높이 계산이 되지 않는다 -> 부모의 높이 계산에 반영되게 만들어줘야함 (clear한다) */
+            float: left;
+            width: 120px;
+            text-align: center;
+            border:1px solid red;
+            height: 35px;
+            line-height: 35px;
+        }
+        ul li:hover {
+            background-color: red;
+            color:white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>ABOUT</li>
+        <li>COURSES</li>
+        <li>COMMUNITY</li>
+        <li>INFO</li>
+    </ul>
+    <div>우리나라 좋은나라 우리나라 좋은나라 우리나라 좋은나라</div>
+</body>
+</html>
