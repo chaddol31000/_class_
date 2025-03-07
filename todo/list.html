@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main</title>
+  <style>
+    .finish {
+      text-decoration: line-through;
+      color:red; 
+    }
+  </style>
+</head>
+<body>
+  <form action="/todo/insert" method="post">
+    <input type="text" name=title placeholder="할 일 입력...">
+    <button>추가하기</button>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>번호</th>
+        <th>할 일</th>
+        <th>등록일</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for todo in todos %}
+        <tr>
+          <td>{{todo.tno}}</td>
+          <td>
+            {% if todo.finish==True %}
+            <span class="finish">{{todo.title}}</span>
+            {% else %}
+            <span class="not_finish">{{todo.title}}</span>
+            {% endif %}
+          </td>
+          <td>{{todo.date}}</td>
+          <td>
+              <form action="/todo/toggle" method="post">
+                <input type="hidden" name="tno" value="{{todo.tno}}"> 
+                <button>
+                  {{"미완료로" if todo.finish==True else "완료로"}}
+                </button>
+              </form>
+              <form action="/todo/delete" method="post">
+                <input type="hidden" name="tno" value="{{todo.tno}}">
+                <button>삭제</button>
+              </form>
+          </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
