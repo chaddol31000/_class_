@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    message= "{{message}}"
+    if(message!='')
+      alert(message)
+  </script>
+  <title>Document</title>
+</head>
+<body>
+    <form action="/card/insert" method="post">
+      <input type="text" name="name" placeholder="이름 입력...">
+      <input type="text" name="tel" placeholder="연락처 입력...">
+      <button>입력하기</button>
+    </form>
+    <table>
+      <thead>
+        <th>번호</th>
+        <th>이름</th>
+        <th>연락처</th>
+      </thead>
+      <tbody>
+        
+      {% for card in name_cards %} <!-- 파이썬 코드라고 나타내는 코드-->
+        <tr>
+          <td>{{card.cno}}</td>
+          <td>{{card.name}}</td>   <!-- 파이썬 코드들 불러오기 -->
+          <td>{{card.tel}}</td>
+          <td>
+              <form action="/card/delete" method="post">
+                <input type="hidden" name="cno" value="{{card.cno}}">
+                <button>삭제하기</button>
+              </form>
+          </td>
+        </tr>
+      {% endfor %}  <!-- endfor 이 꼭 있어야함 -->
+      </tbody>
+    </table>
+</body>
+</html>
