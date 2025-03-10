@@ -1,12 +1,16 @@
-# 하나의 작업은 같은 주소
-    - /login
-        get : 읽기 (render_template)
-        post : 처리한 다음 redirect
-            성공 - /success 로 보내자
-            실패 - /login으로 보내자
-                - 그냥 /login 으로 보내면 로그인 주소를 타이핑해서 들어온 것과
-                  로그인에 실패한 것이 구별이 안된다
-                - /login?state=fail 로 이동시키자
-                   request.args.get('state')
-    - /success
-        get : 읽기 (render_template)
+1. 웹은 요청과 응답만 존재 - 상태를 기억하지 못한다
+
+2. 사용자 정보를 어떻게 저장하지?
+  - 웹은 원래 사용자 정보를 저장하지 못함
+- cookie : 사용자 컴퓨터에 저장                                 중요하지 않은 간단한 (하찮은) 정보 (ex. 방문했던 링크 등) (중요한 정보는 따로 보안 저장함)
+- session : web서버 메모리에 저장 -> 껐다 키면 사라짐            로그인 정보 (수명이 길지 않은 정보) (ex. 최근 본 상품 뜨는 거 )
+- database : 별도의 데이터베이스 서버에 저장 -> 영구 저장         중요한 정보 ()
+
+3. session
+- 서버 메모리에 있는 사용자 정보 저장 영역 (사용자마다 주어진다)
+- 사용하지 않고 일정 시간이 지나면 파괴
+- 언제 만들어지나? 요청을 보낸 사용자가 세션이 없을 때
+- 로그인 
+    session['username'] = 로그인 아이디
+    session.get('username')!=None = 로그인 확인
+    session.clear() = 로그아웃
